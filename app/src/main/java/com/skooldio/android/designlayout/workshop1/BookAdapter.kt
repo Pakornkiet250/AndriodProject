@@ -1,5 +1,5 @@
 package com.skooldio.android.designlayout.workshop1
-import Book
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

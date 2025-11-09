@@ -125,7 +125,6 @@
                     android:layout_height="48dp"
                     android:src="@drawable/ic_facebook_round"
                     android:background="@null"
-                    app:tint="@null"
                     android:contentDescription="Login with Facebook" />
 
                 <ImageView
@@ -133,7 +132,6 @@
                     android:layout_height="48dp"
                     android:src="@drawable/ic_google_round"
                     android:background="@null"
-                    app:tint="@null"
                     android:layout_marginStart="24dp"
                     android:contentDescription="Login with Google" />
 
@@ -142,7 +140,6 @@
                     android:layout_height="48dp"
                     android:src="@drawable/ic_apple_round"
                     android:background="@null"
-                    app:tint="@null"
                     android:layout_marginStart="24dp"
                     android:contentDescription="Login with Apple" />
             </LinearLayout>
