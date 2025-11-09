@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- ปุ่มปิด -->
+        <ImageButton
+            android:id="@+id/button_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- รูปหนังสือ -->
+        <ImageView
+            android:id="@+id/image_book_detail"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_close" />
+
+        <!-- ชื่อหนังสือ -->
+        <TextView
+            android:id="@+id/text_book_title_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Book Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_book_detail"
+            app:layout_constraintTop_toTopOf="@id/image_book_detail" />
+
+        <!-- ราคา -->
+        <TextView
+            android:id="@+id/text_book_price_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="$45"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@id/image_book_detail"
+            app:layout_constraintTop_toBottomOf="@id/text_book_title_detail" />
+
+        <!-- ปุ่ม Favorite ใน Dialog -->
+        <ImageButton
+            android:id="@+id/button_favorite_dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="Add to favorite"
+            app:layout_constraintStart_toEndOf="@id/image_book_detail"
+            app:layout_constraintTop_toBottomOf="@id/text_book_price_detail" />
+
+        <!-- คำอธิบาย -->
+        <TextView
+            android:id="@+id/label_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="รายละเอียด"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_book_detail" />
+
+        <TextView
+            android:id="@+id/text_book_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="นี่คือหนังสือที่น่าสนใจมาก มีเนื้อหาที่ดีและภาพประกอบสวยงาม เหมาะสำหรับผู้ที่ชื่นชอบการอ่าน"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_description" />
+
+        <!-- ปุ่มเพิ่มเข้าตะกร้า -->
+        <Button
+            android:id="@+id/button_add_to_cart"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="เพิ่มเข้าตะกร้า"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/button_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_book_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

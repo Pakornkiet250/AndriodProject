@@ -5,30 +5,61 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <ImageView
-        android:id="@+id/image_book_cover"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_book"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_baseline_person_24"
-        app:layout_constraintDimensionRatio="3:4"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_book_cover"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintDimensionRatio="3:4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- ปุ่ม Favorite มุมขวาบน -->
+            <ImageButton
+                android:id="@+id/button_favorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_favorite_button"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="Add to favorite"
+                app:layout_constraintEnd_toEndOf="@id/image_book_cover"
+                app:layout_constraintTop_toTopOf="@id/image_book_cover"
+                app:tint="@android:color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/text_book_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:maxLines="2"
         android:ellipsize="end"
+        android:maxLines="2"
         android:textAlignment="center"
-        android:textSize="14sp"
         android:textColor="@android:color/black"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_book_cover" />
+        app:layout_constraintTop_toBottomOf="@id/card_book" />
 
     <TextView
         android:id="@+id/text_book_price"
